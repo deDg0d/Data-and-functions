@@ -15,7 +15,7 @@ def assign_sharpe_weight(portfolio):#weight generator #
                 else:
                     while True:
                         up_index = np.where(w[i]>up)[0]
-                        if (list(up_index)) == [] and sum(w[i])>0.997 and sum(w[i])<1.01:
+                        if (list(up_index)) == [] and sum(w[i])>0.999 and sum(w[i])<1.001:
                             break
                         mask = np.ones_like(w[i], dtype=bool)
                         mask[up_index] = False
